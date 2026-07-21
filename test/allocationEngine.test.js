@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { QUESTIONNAIRE, buildInvestorVector, institutionalAllocation } from '../src/allocationEngine.js';
+import { QUESTIONNAIRE, FAMOUS_INVESTORS, buildInvestorVector, institutionalAllocation } from '../src/allocationEngine.js';
 
 test('questionnaire captures institutional investor vector sections', () => {
   for (const section of ['financialCapacity', 'goalProfile', 'riskPreference', 'taxProfile', 'investmentStyle', 'marketState']) {
@@ -23,4 +23,18 @@ test('allocation uses prior as fallback, then adapts to liabilities', () => {
   assert.ok(conservativeGoal.allocation.equity < conservativeGoal.prior.allocation.equity);
   assert.ok(conservativeGoal.allocation.cash >= 15);
   assert.ok(conservativeGoal.nearestInvestor.name);
+});
+
+test('famous investor library includes 21 accurate archetypes with complete vectors', () => {
+  assert.equal(FAMOUS_INVESTORS.length, 21);
+  for (const investor of FAMOUS_INVESTORS) {
+    assert.ok(investor.name);
+    assert.ok(investor.style);
+    assert.ok(investor.attributes.length >= 4);
+    for (const key of ['riskPreference', 'concentrationComfort', 'activePreference', 'quality', 'value', 'momentum', 'dividend', 'complexityTolerance', 'stabilityPreference']) {
+      assert.equal(typeof investor.vector[key], 'number', `${investor.name} missing ${key}`);
+    }
+  }
+  assert.ok(FAMOUS_INVESTORS.some(investor => investor.name === 'Benjamin Graham' && investor.style.includes('margin-of-safety')));
+  assert.ok(FAMOUS_INVESTORS.some(investor => investor.name === 'Jim Simons' && investor.style.includes('quantitative')));
 });

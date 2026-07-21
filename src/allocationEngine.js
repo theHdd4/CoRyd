@@ -37,6 +37,102 @@ const FAMOUS_INVESTORS = [
     style: 'disruptive innovation growth',
     attributes: ['high upside seeking', 'thematic growth', 'high volatility acceptance', 'long-duration equity'],
     vector: { riskPreference: 92, concentrationComfort: 82, activePreference: 90, quality: 45, value: 10, momentum: 68, dividend: 0, complexityTolerance: 82, stabilityPreference: 12 }
+  },
+  {
+    name: 'Benjamin Graham',
+    style: 'deep value and margin-of-safety investing',
+    attributes: ['intrinsic value discipline', 'net-net opportunities', 'balance-sheet conservatism', 'rules-based security analysis'],
+    vector: { riskPreference: 42, concentrationComfort: 35, activePreference: 78, quality: 62, value: 96, momentum: 5, dividend: 48, complexityTolerance: 42, stabilityPreference: 82 }
+  },
+  {
+    name: 'Charlie Munger',
+    style: 'quality compounder investing',
+    attributes: ['mental models', 'durable moats', 'high-quality businesses', 'extreme patience'],
+    vector: { riskPreference: 58, concentrationComfort: 86, activePreference: 70, quality: 98, value: 72, momentum: 8, dividend: 38, complexityTolerance: 46, stabilityPreference: 74 }
+  },
+  {
+    name: 'Seth Klarman',
+    style: 'risk-averse value and special situations',
+    attributes: ['margin of safety', 'cash optionality', 'distressed opportunities', 'downside-first underwriting'],
+    vector: { riskPreference: 38, concentrationComfort: 62, activePreference: 82, quality: 58, value: 92, momentum: 4, dividend: 28, complexityTolerance: 74, stabilityPreference: 88 }
+  },
+  {
+    name: 'Howard Marks',
+    style: 'credit-cycle and contrarian value investing',
+    attributes: ['cycle awareness', 'risk control', 'distressed credit', 'second-level thinking'],
+    vector: { riskPreference: 46, concentrationComfort: 44, activePreference: 75, quality: 56, value: 82, momentum: 12, dividend: 42, complexityTolerance: 80, stabilityPreference: 84 }
+  },
+  {
+    name: 'George Soros',
+    style: 'global macro reflexivity investing',
+    attributes: ['macro catalysts', 'currency and rates expertise', 'reflexivity framework', 'rapid risk management'],
+    vector: { riskPreference: 88, concentrationComfort: 76, activePreference: 96, quality: 28, value: 34, momentum: 75, dividend: 0, complexityTolerance: 96, stabilityPreference: 20 }
+  },
+  {
+    name: 'Stanley Druckenmiller',
+    style: 'concentrated global macro growth investing',
+    attributes: ['asymmetric bets', 'top-down macro', 'capital preservation discipline', 'trend recognition'],
+    vector: { riskPreference: 84, concentrationComfort: 84, activePreference: 94, quality: 52, value: 38, momentum: 82, dividend: 5, complexityTolerance: 92, stabilityPreference: 30 }
+  },
+  {
+    name: 'Jim Simons',
+    style: 'quantitative statistical arbitrage',
+    attributes: ['systematic models', 'data-driven signals', 'high diversification', 'short holding periods'],
+    vector: { riskPreference: 66, concentrationComfort: 18, activePreference: 92, quality: 35, value: 35, momentum: 70, dividend: 0, complexityTolerance: 100, stabilityPreference: 58 }
+  },
+  {
+    name: 'David Swensen',
+    style: 'endowment-model asset allocation',
+    attributes: ['illiquidity premium', 'alternative assets', 'manager selection', 'equity-oriented diversification'],
+    vector: { riskPreference: 68, concentrationComfort: 32, activePreference: 62, quality: 60, value: 48, momentum: 22, dividend: 20, complexityTolerance: 92, stabilityPreference: 62 }
+  },
+  {
+    name: 'Joel Greenblatt',
+    style: 'quality-value special situations',
+    attributes: ['high returns on capital', 'earnings yield discipline', 'spinoffs and special situations', 'systematic value ranking'],
+    vector: { riskPreference: 64, concentrationComfort: 58, activePreference: 82, quality: 86, value: 86, momentum: 18, dividend: 18, complexityTolerance: 62, stabilityPreference: 62 }
+  },
+  {
+    name: 'Philip Fisher',
+    style: 'scuttlebutt growth-quality investing',
+    attributes: ['long-term growth companies', 'management quality', 'research through industry contacts', 'innovation focus'],
+    vector: { riskPreference: 70, concentrationComfort: 72, activePreference: 84, quality: 90, value: 38, momentum: 28, dividend: 8, complexityTolerance: 56, stabilityPreference: 50 }
+  },
+  {
+    name: 'Bill Gross',
+    style: 'active fixed-income and duration management',
+    attributes: ['bond-market specialization', 'duration positioning', 'income generation', 'macro rate views'],
+    vector: { riskPreference: 36, concentrationComfort: 28, activePreference: 78, quality: 62, value: 50, momentum: 32, dividend: 82, complexityTolerance: 78, stabilityPreference: 86 }
+  },
+  {
+    name: 'Carl Icahn',
+    style: 'activist value investing',
+    attributes: ['corporate activism', 'control influence', 'catalyst-driven value', 'concentrated positions'],
+    vector: { riskPreference: 82, concentrationComfort: 92, activePreference: 96, quality: 48, value: 78, momentum: 35, dividend: 25, complexityTolerance: 82, stabilityPreference: 28 }
+  },
+  {
+    name: 'Paul Tudor Jones',
+    style: 'global macro and trend-following trading',
+    attributes: ['technical trend signals', 'macro themes', 'strict risk controls', 'crash-risk awareness'],
+    vector: { riskPreference: 78, concentrationComfort: 46, activePreference: 94, quality: 35, value: 32, momentum: 90, dividend: 0, complexityTolerance: 90, stabilityPreference: 38 }
+  },
+  {
+    name: 'John Templeton',
+    style: 'global contrarian value investing',
+    attributes: ['international diversification', 'maximum pessimism buying', 'long-term discipline', 'valuation sensitivity'],
+    vector: { riskPreference: 60, concentrationComfort: 45, activePreference: 76, quality: 65, value: 88, momentum: 8, dividend: 34, complexityTolerance: 58, stabilityPreference: 68 }
+  },
+  {
+    name: 'Rakesh Jhunjhunwala',
+    style: 'India-focused growth-at-value investing',
+    attributes: ['high-conviction equity', 'emerging-market growth', 'long-term compounding', 'opportunistic trading roots'],
+    vector: { riskPreference: 82, concentrationComfort: 82, activePreference: 90, quality: 72, value: 58, momentum: 42, dividend: 18, complexityTolerance: 62, stabilityPreference: 34 }
+  },
+  {
+    name: 'Mohnish Pabrai',
+    style: 'cloned concentrated value investing',
+    attributes: ['heads-I-win underwriting', 'cloning proven ideas', 'concentrated bets', 'patience around mispricing'],
+    vector: { riskPreference: 66, concentrationComfort: 88, activePreference: 82, quality: 68, value: 88, momentum: 8, dividend: 20, complexityTolerance: 44, stabilityPreference: 62 }
   }
 ];
 
@@ -157,4 +253,4 @@ function buildRationale(vector, allocation, priorName) {
   return [`Started from ${priorName} base mix only as a fallback prior.`, `Capped risky assets using risk capacity (${Math.round(vector.riskCapacity)}) and risk preference (${Math.round(vector.riskPreference)}).`, `Raised liability-aware cash/debt when goal criticality or liability matching need is high.`, `Final mix: ${JSON.stringify(allocation)}.`];
 }
 
-export { QUESTIONNAIRE, PRIOR_MIX_BY_RISK, buildInvestorVector, institutionalAllocation, nearestFamousInvestor };
+export { QUESTIONNAIRE, PRIOR_MIX_BY_RISK, FAMOUS_INVESTORS, buildInvestorVector, institutionalAllocation, nearestFamousInvestor };
