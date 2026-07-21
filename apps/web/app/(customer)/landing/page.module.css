@@ -67,9 +67,10 @@
 
 .hero {
   display: grid;
-  grid-template-columns: 46% 54%;
-  min-height: 930px;
-  padding: 207px 72px 0;
+  grid-template-columns: minmax(430px, 46%) minmax(0, 54%);
+  min-height: 824px;
+  padding: 195px 72px 0;
+  overflow: hidden;
 }
 
 .heroCopy h1 {
@@ -156,156 +157,31 @@
 }
 
 .heroArt {
+  align-self: start;
+  min-height: 630px;
   position: relative;
 }
 
-.vehicleScene {
-  height: 650px;
-  position: relative;
-}
-
-.cloudOne,
-.cloudTwo {
-  background: #f4f0ed;
-  border-radius: 999px;
-  height: 16px;
-  opacity: .7;
-  position: absolute;
-  width: 112px;
-}
-
-.cloudOne {
-  right: 190px;
-  top: 110px;
-}
-
-.cloudTwo {
-  left: 116px;
-  top: 174px;
-  width: 136px;
-}
-
-.skyline {
-  background: linear-gradient(to top, #fff3eb 0 72%, transparent 72%);
-  bottom: 130px;
-  clip-path: polygon(0 70%,5% 70%,5% 55%,10% 55%,10% 62%,15% 62%,15% 40%,20% 40%,20% 65%,25% 65%,25% 48%,30% 48%,30% 28%,35% 28%,35% 60%,40% 60%,40% 53%,45% 53%,45% 64%,50% 64%,50% 50%,56% 50%,56% 36%,63% 36%,63% 60%,70% 60%,70% 30%,75% 30%,75% 16%,80% 16%,80% 62%,86% 62%,86% 40%,92% 40%,92% 60%,100% 60%,100% 100%,0 100%);
-  height: 300px;
-  opacity: .72;
-  position: absolute;
-  right: -74px;
-  width: 760px;
-}
-
-.road {
-  background: linear-gradient(170deg, transparent 0 28%, #eeeeeb 29% 55%, transparent 56%);
-  bottom: 14px;
-  height: 230px;
-  position: absolute;
-  right: -72px;
-  width: 820px;
-}
-
-.scooter {
-  bottom: 122px;
-  height: 210px;
-  left: 70px;
-  position: absolute;
-  width: 230px;
-  z-index: 3;
-}
-
-.rider {
-  background: linear-gradient(#26313a 0 18%, #ff7840 18% 62%, #202934 62%);
-  border-radius: 45% 45% 35% 35%;
-  height: 118px;
-  left: 82px;
-  position: absolute;
-  top: 8px;
-  width: 54px;
-}
-
-.scooterBody {
-  background: #fff8f1;
-  border: 4px solid #2f3942;
-  border-radius: 58% 30% 48% 45%;
-  bottom: 22px;
-  box-shadow: 28px 34px 0 -20px #202934, 98px 34px 0 -20px #202934;
-  height: 82px;
-  left: 28px;
-  position: absolute;
-  width: 145px;
-}
-
-.car {
-  bottom: 128px;
-  height: 184px;
-  position: absolute;
-  right: 36px;
-  width: 430px;
-  z-index: 2;
-}
-
-.carBody {
-  align-items: center;
-  background: #fff;
-  border: 3px solid #27313a;
-  border-radius: 40px 78px 36px 36px;
-  bottom: 35px;
-  box-shadow: 0 22px 34px rgba(37, 42, 48, .18);
-  color: #ff4b22;
-  display: flex;
-  font-size: 20px;
-  font-weight: 900;
-  height: 92px;
-  justify-content: center;
-  position: absolute;
-  right: 0;
-  width: 386px;
-}
-
-.carTop {
-  background: #dce7e8;
-  border: 3px solid #27313a;
-  border-radius: 95px 110px 10px 10px;
-  height: 76px;
-  position: absolute;
-  right: 116px;
-  top: 12px;
-  width: 164px;
-  z-index: 1;
-}
-
-.carWheelOne,
-.carWheelTwo {
-  background: #202934;
-  border: 8px solid #eef2f2;
-  border-radius: 50%;
-  bottom: 0;
-  height: 54px;
-  position: absolute;
-  width: 54px;
-  z-index: 3;
-}
-
-.carWheelOne {
-  left: 88px;
-}
-
-.carWheelTwo {
-  right: 56px;
+.heroArt img {
+  display: block;
+  height: auto;
+  margin-left: -70px;
+  margin-top: -38px;
+  max-width: none;
+  width: min(884px, calc(100% + 134px));
 }
 
 .planCallout {
   align-items: center;
   background: #fff;
   border-radius: 12px;
-  bottom: 96px;
+  bottom: 122px;
   box-shadow: 0 18px 38px rgba(34, 39, 46, .12);
   display: flex;
   gap: 18px;
   padding: 22px 30px;
   position: absolute;
-  right: 48px;
+  right: 2px;
   width: 250px;
 }
 
@@ -548,6 +424,25 @@
   .planGrid,
   .footer {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 80px;
+  }
+
+  .heroArt {
+    min-height: auto;
+  }
+
+  .heroArt img {
+    margin: 40px 0 0;
+    width: 100%;
+  }
+
+  .planCallout {
+    bottom: 24px;
+    right: 24px;
   }
 
   .benefits {

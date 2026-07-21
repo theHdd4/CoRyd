@@ -1,19 +1,6 @@
 import { getCustomerLandingData } from './data';
 import styles from './page.module.css';
 
-function VehicleScene() {
-  return (
-    <div className={styles.vehicleScene} aria-hidden="true">
-      <div className={styles.cloudOne} />
-      <div className={styles.cloudTwo} />
-      <div className={styles.skyline} />
-      <div className={styles.road} />
-      <div className={styles.scooter}><span className={styles.rider} /><span className={styles.scooterBody} /></div>
-      <div className={styles.car}><span className={styles.carTop} /><span className={styles.carBody}>CoRyd</span><span className={styles.carWheelOne} /><span className={styles.carWheelTwo} /></div>
-    </div>
-  );
-}
-
 export default async function CustomerLandingPage() {
   const data = await getCustomerLandingData();
 
@@ -32,7 +19,10 @@ export default async function CustomerLandingPage() {
           <div className={styles.heroActions}><a href="/login">{data.hero.primaryCta}</a><button><span>▷</span>{data.hero.secondaryCta}</button></div>
           <div className={styles.cities}><small>Available in</small><div>{data.cities.map((city) => <span key={city.name}><b>{city.icon}</b>{city.name}</span>)}</div></div>
         </div>
-        <div className={styles.heroArt}><VehicleScene /><div className={styles.planCallout}><span>▣</span><p>{data.hero.subscriptionCallout.replace('₹199/month', '')}<strong>₹199/month</strong></p></div></div>
+        <div className={styles.heroArt}>
+          <img src="/assets/customer-landing-hero.png" alt="CoRyd bike taxi and car on a city road" />
+          <div className={styles.planCallout}><span>▣</span><p>{data.hero.subscriptionCallout.replace('₹199/month', '')}<strong>₹199/month</strong></p></div>
+        </div>
       </section>
 
       <section className={styles.benefits}>
