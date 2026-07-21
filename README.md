@@ -149,6 +149,23 @@ Expected response:
 
 Visit <http://localhost:3000> in your browser.
 
+
+## Web portal routes
+
+The first Customer Portal screen is implemented at:
+
+```text
+http://localhost:3000/dashboard
+```
+
+The page uses a Next.js server-side data provider in `apps/web/app/(customer)/dashboard/data.ts` and exposes the same dummy dashboard payload through the web app backend route:
+
+```text
+http://localhost:3000/api/customer/dashboard
+```
+
+No database migration is required for this UI slice because the customer dashboard currently uses seeded dummy data until the real ride, wallet, membership, and offer APIs are connected.
+
 ## Running PostgreSQL migrations
 
 ### First-time database initialization
