@@ -152,19 +152,32 @@ Visit <http://localhost:3000> in your browser.
 
 ## Web portal routes
 
-The first Customer Portal screen is implemented at:
+The pre-login Customer Landing page is implemented at the web root and is also available at `/landing`:
+
+```text
+http://localhost:3000
+http://localhost:3000/landing
+```
+
+The first signed-in Customer Portal dashboard screen is implemented at:
 
 ```text
 http://localhost:3000/dashboard
 ```
 
-The page uses a Next.js server-side data provider in `apps/web/app/(customer)/dashboard/data.ts` and exposes the same dummy dashboard payload through the web app backend route:
+The landing page uses a Next.js server-side data provider in `apps/web/app/(customer)/landing/data.ts` and exposes the same dummy marketing/pricing payload through the web app backend route:
+
+```text
+http://localhost:3000/api/customer/landing
+```
+
+The dashboard page uses a Next.js server-side data provider in `apps/web/app/(customer)/dashboard/data.ts` and exposes the same dummy dashboard payload through the web app backend route:
 
 ```text
 http://localhost:3000/api/customer/dashboard
 ```
 
-No database migration is required for this UI slice because the customer dashboard currently uses seeded dummy data until the real ride, wallet, membership, and offer APIs are connected.
+No database migration is required for these UI slices because the landing page and customer dashboard currently use seeded dummy data until the real marketing, pricing, ride, wallet, membership, and offer APIs are connected.
 
 ## Running PostgreSQL migrations
 

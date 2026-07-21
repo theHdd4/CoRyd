@@ -1,0 +1,568 @@
+.pageShell {
+  min-height: 100vh;
+  background: #fffdfb;
+  color: #121820;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+.header {
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 74px;
+}
+
+.logo,
+.footerLogo {
+  color: #ff4b22;
+  font-size: 34px;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -2.4px;
+  text-decoration: none;
+}
+
+.logo span,
+.footerLogo span {
+  font-size: 22px;
+  margin-right: 2px;
+}
+
+.nav {
+  display: flex;
+  gap: 52px;
+  margin-left: 120px;
+}
+
+.nav a,
+.footer a {
+  color: #111820;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.authActions {
+  display: flex;
+  gap: 20px;
+}
+
+.authActions a,
+.heroActions a,
+.membershipIntro a {
+  border: 1px solid #ff5a32;
+  border-radius: 8px;
+  color: #ff4a22;
+  font-weight: 800;
+  padding: 17px 25px;
+  text-decoration: none;
+}
+
+.authActions a:last-child,
+.heroActions a {
+  background: #ff4b22;
+  color: #fff;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  min-height: 790px;
+  padding: 126px 74px 0;
+}
+
+.heroCopy h1 {
+  font-size: 65px;
+  letter-spacing: -2.8px;
+  line-height: 1.22;
+  margin: 0 0 34px;
+}
+
+.heroCopy h1 span {
+  display: block;
+}
+
+.heroCopy p {
+  color: #57606b;
+  font-size: 22px;
+  line-height: 1.55;
+  max-width: 560px;
+  margin: 0;
+}
+
+.heroActions {
+  display: flex;
+  gap: 28px;
+  margin-top: 50px;
+}
+
+.heroActions a,
+.heroActions button {
+  align-items: center;
+  display: inline-flex;
+  height: 56px;
+  padding: 0 29px;
+}
+
+.heroActions button {
+  background: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  color: #101720;
+  font-size: 16px;
+  font-weight: 800;
+  gap: 13px;
+}
+
+.heroActions button span {
+  align-items: center;
+  border: 1px solid #ff6a42;
+  border-radius: 50%;
+  color: #ff4b22;
+  display: inline-flex;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+}
+
+.cities {
+  margin-top: 92px;
+}
+
+.cities small {
+  color: #596270;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 19px;
+}
+
+.cities div {
+  display: flex;
+  gap: 30px;
+}
+
+.cities span {
+  align-items: center;
+  color: #596270;
+  display: flex;
+  gap: 8px;
+}
+
+.cities b {
+  color: #ff815f;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.heroArt {
+  position: relative;
+}
+
+.vehicleScene {
+  height: 610px;
+  position: relative;
+}
+
+.cloudOne,
+.cloudTwo {
+  background: #f4f0ed;
+  border-radius: 999px;
+  height: 16px;
+  opacity: .7;
+  position: absolute;
+  width: 112px;
+}
+
+.cloudOne {
+  right: 190px;
+  top: 110px;
+}
+
+.cloudTwo {
+  left: 116px;
+  top: 174px;
+  width: 136px;
+}
+
+.skyline {
+  background: linear-gradient(to top, #fff3eb 0 72%, transparent 72%);
+  bottom: 130px;
+  clip-path: polygon(0 70%,5% 70%,5% 55%,10% 55%,10% 62%,15% 62%,15% 40%,20% 40%,20% 65%,25% 65%,25% 48%,30% 48%,30% 28%,35% 28%,35% 60%,40% 60%,40% 53%,45% 53%,45% 64%,50% 64%,50% 50%,56% 50%,56% 36%,63% 36%,63% 60%,70% 60%,70% 30%,75% 30%,75% 16%,80% 16%,80% 62%,86% 62%,86% 40%,92% 40%,92% 60%,100% 60%,100% 100%,0 100%);
+  height: 300px;
+  opacity: .72;
+  position: absolute;
+  right: -74px;
+  width: 760px;
+}
+
+.road {
+  background: linear-gradient(170deg, transparent 0 28%, #eeeeeb 29% 55%, transparent 56%);
+  bottom: 14px;
+  height: 230px;
+  position: absolute;
+  right: -72px;
+  width: 820px;
+}
+
+.scooter {
+  bottom: 122px;
+  height: 210px;
+  left: 70px;
+  position: absolute;
+  width: 230px;
+  z-index: 3;
+}
+
+.rider {
+  background: linear-gradient(#26313a 0 18%, #ff7840 18% 62%, #202934 62%);
+  border-radius: 45% 45% 35% 35%;
+  height: 118px;
+  left: 82px;
+  position: absolute;
+  top: 8px;
+  width: 54px;
+}
+
+.scooterBody {
+  background: #fff8f1;
+  border: 4px solid #2f3942;
+  border-radius: 58% 30% 48% 45%;
+  bottom: 22px;
+  box-shadow: 28px 34px 0 -20px #202934, 98px 34px 0 -20px #202934;
+  height: 82px;
+  left: 28px;
+  position: absolute;
+  width: 145px;
+}
+
+.car {
+  bottom: 128px;
+  height: 184px;
+  position: absolute;
+  right: 36px;
+  width: 430px;
+  z-index: 2;
+}
+
+.carBody {
+  align-items: center;
+  background: #fff;
+  border: 3px solid #27313a;
+  border-radius: 40px 78px 36px 36px;
+  bottom: 35px;
+  box-shadow: 0 22px 34px rgba(37, 42, 48, .18);
+  color: #ff4b22;
+  display: flex;
+  font-size: 20px;
+  font-weight: 900;
+  height: 92px;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  width: 386px;
+}
+
+.carTop {
+  background: #dce7e8;
+  border: 3px solid #27313a;
+  border-radius: 95px 110px 10px 10px;
+  height: 76px;
+  position: absolute;
+  right: 116px;
+  top: 12px;
+  width: 164px;
+  z-index: 1;
+}
+
+.carWheelOne,
+.carWheelTwo {
+  background: #202934;
+  border: 8px solid #eef2f2;
+  border-radius: 50%;
+  bottom: 0;
+  height: 54px;
+  position: absolute;
+  width: 54px;
+  z-index: 3;
+}
+
+.carWheelOne {
+  left: 88px;
+}
+
+.carWheelTwo {
+  right: 56px;
+}
+
+.planCallout {
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  bottom: 72px;
+  box-shadow: 0 18px 38px rgba(34, 39, 46, .12);
+  display: flex;
+  gap: 18px;
+  padding: 22px 30px;
+  position: absolute;
+  right: 48px;
+  width: 250px;
+}
+
+.planCallout span {
+  background: #fff1eb;
+  border-radius: 50%;
+  color: #ff4b22;
+  display: grid;
+  height: 46px;
+  place-items: center;
+  width: 46px;
+}
+
+.planCallout p {
+  color: #596270;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.planCallout strong {
+  color: #ff4b22;
+}
+
+.benefits {
+  padding: 42px 116px 84px;
+  text-align: center;
+}
+
+.benefits h2 {
+  font-size: 29px;
+  letter-spacing: -.4px;
+  margin-bottom: 42px;
+}
+
+.benefits > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.benefits article {
+  border-right: 1px solid #e5e5e5;
+  padding: 0 42px;
+}
+
+.benefits article:last-child {
+  border-right: 0;
+}
+
+.benefits span,
+.planGrid article div span {
+  align-items: center;
+  background: #fff0e9;
+  border-radius: 50%;
+  color: #ff4b22;
+  display: inline-flex;
+  font-size: 34px;
+  height: 76px;
+  justify-content: center;
+  width: 76px;
+}
+
+.benefits h3 {
+  font-size: 20px;
+  margin: 24px 0 15px;
+}
+
+.benefits p {
+  color: #596270;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.membership {
+  background: linear-gradient(120deg, #fff7ef, #fff);
+  border-top: 1px solid #f4ede6;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 86px;
+  padding: 62px 74px 28px;
+}
+
+.membershipIntro small {
+  color: #ff4b22;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.membershipIntro h2 {
+  font-size: 39px;
+  letter-spacing: -1.4px;
+  line-height: 1.2;
+  margin: 24px 0 18px;
+}
+
+.membershipIntro p {
+  color: #596270;
+  font-size: 19px;
+  line-height: 1.55;
+  margin-bottom: 32px;
+}
+
+.membershipIntro a {
+  display: inline-flex;
+  background: #fff;
+}
+
+.planGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.planGrid article {
+  background: #fff;
+  border: 1px solid #f2f2f2;
+  border-radius: 10px;
+  box-shadow: 0 18px 35px rgba(25, 30, 38, .08);
+  min-height: 240px;
+  padding: 38px 34px;
+  position: relative;
+}
+
+.planGrid article div {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.planGrid h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.planGrid p {
+  margin: 8px 0 28px;
+}
+
+.planGrid p strong {
+  font-size: 24px;
+}
+
+.planGrid ul {
+  color: #29313a;
+  display: grid;
+  gap: 18px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.planGrid li {
+  font-size: 15px;
+}
+
+.featuredPlan {
+  border-color: #ff8b6f !important;
+}
+
+.featuredPlan em {
+  background: #ffe8dc;
+  border-radius: 6px;
+  color: #ff4b22;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 800;
+  left: 50%;
+  padding: 9px 19px;
+  position: absolute;
+  top: -18px;
+  transform: translateX(-50%);
+}
+
+.planNote {
+  color: #596270;
+  font-size: 15px;
+  grid-column: 2;
+  margin: 10px 0 0 90px;
+}
+
+.footer {
+  align-items: flex-start;
+  border-top: 1px solid #ececec;
+  display: grid;
+  grid-template-columns: 280px repeat(3, 150px) 170px;
+  gap: 60px;
+  padding: 40px 74px;
+}
+
+.footerLogo {
+  display: inline-block;
+  font-size: 28px;
+  margin-bottom: 22px;
+}
+
+.footer p,
+.footer a {
+  color: #596270;
+  line-height: 1.7;
+}
+
+.footer nav {
+  display: grid;
+  gap: 14px;
+}
+
+.socials {
+  display: flex;
+  gap: 18px;
+}
+
+.socials span {
+  align-items: center;
+  background: #626972;
+  border-radius: 50%;
+  color: #fff;
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 800;
+  height: 24px;
+  justify-content: center;
+  width: 24px;
+}
+
+@media (max-width: 1100px) {
+  .header,
+  .hero,
+  .membership,
+  .footer {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hero,
+  .membership,
+  .benefits > div,
+  .planGrid,
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .benefits article {
+    border-right: 0;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 28px;
+  }
+
+  .planNote {
+    grid-column: 1;
+    margin-left: 0;
+  }
+}
