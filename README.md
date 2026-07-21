@@ -159,7 +159,20 @@ http://localhost:3000
 http://localhost:3000/landing
 ```
 
-The first signed-in Customer Portal dashboard screen is implemented at:
+Temporary demo login credentials for the Customer Portal are:
+
+```text
+username: customer
+password: customer
+```
+
+The login form is available at:
+
+```text
+http://localhost:3000/login
+```
+
+A successful demo login sets an HTTP-only demo cookie and redirects to the first signed-in Customer Portal dashboard screen:
 
 ```text
 http://localhost:3000/dashboard
@@ -177,7 +190,7 @@ The dashboard page uses a Next.js server-side data provider in `apps/web/app/(cu
 http://localhost:3000/api/customer/dashboard
 ```
 
-No database migration is required for these UI slices because the landing page and customer dashboard currently use seeded dummy data until the real marketing, pricing, ride, wallet, membership, and offer APIs are connected.
+No database migration is required for these UI slices because the temporary demo login uses an HTTP-only cookie and the landing page/customer dashboard currently use seeded dummy data until the real auth, marketing, pricing, ride, wallet, membership, and offer APIs are connected.
 
 ## Running PostgreSQL migrations
 

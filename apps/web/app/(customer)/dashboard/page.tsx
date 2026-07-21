@@ -1,3 +1,5 @@
+import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
 import { getCustomerDashboardData } from './data';
 import styles from './page.module.css';
 
@@ -6,6 +8,12 @@ const navIcons = ['⌂', '▰', '♕', '▣', '♡', '♧', '?', '⚙'];
 const actions = [ ['▣', 'Schedule'], ['▰', 'Rentals'], ['⬡', 'Safety'], ['◖', 'Help'] ];
 
 export default async function CustomerDashboardPage() {
+  const demoSession = cookies().get('coryd_demo_customer_session')?.value;
+
+  if (demoSession !== 'customer') {
+    redirect('/login');
+  }
+
   const data = await getCustomerDashboardData();
 
   return (
