@@ -1,0 +1,10 @@
+{
+  "name": "coryd-allocation-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "lint": "node --check src/allocationEngine.js && node --check test/allocationEngine.test.js"
+  }
+}
