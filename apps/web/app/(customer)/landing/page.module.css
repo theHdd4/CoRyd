@@ -4,10 +4,11 @@
   color: #121820;
   font-family: Inter, ui-sans-serif, system-ui, sans-serif;
   overflow-x: hidden;
+  padding: 0;
 }
 
 .header {
-  height: 96px;
+  height: 82px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -75,8 +76,8 @@
   grid-template-columns: minmax(420px, .88fr) minmax(560px, 1.12fr);
   margin: 0 auto;
   max-width: 1680px;
-  min-height: 660px;
-  padding: 56px 64px 72px;
+  min-height: 560px;
+  padding: 28px 64px 56px;
   overflow: hidden;
 }
 
@@ -84,7 +85,7 @@
   font-size: clamp(56px, 4.6vw, 76px);
   letter-spacing: -3.5px;
   line-height: 1.08;
-  margin: 0 0 32px;
+  margin: 0 0 24px;
 }
 
 .heroCopy h1 span {
@@ -102,7 +103,7 @@
 .heroActions {
   display: flex;
   gap: 24px;
-  margin-top: 44px;
+  margin-top: 36px;
 }
 
 .heroActions a,
@@ -135,7 +136,7 @@
 }
 
 .cities {
-  margin-top: 64px;
+  margin-top: 46px;
 }
 
 .cities small {
