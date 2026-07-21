@@ -3,12 +3,18 @@
   "private": true,
   "version": "0.1.0",
   "description": "CoRyd subscription-based mobility platform monorepo",
-  "workspaces": ["apps/*"],
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
     "dev": "docker compose up --build",
     "build": "npm run build --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
-    "test": "npm run test --workspaces --if-present"
+    "test": "npm run test --workspaces --if-present",
+    "db:migrate": "docker compose exec -T postgres psql -U coryd -d coryd -f /docker-entrypoint-initdb.d/migrations/001_initial_schema.sql",
+    "db:reset": "docker compose down -v && docker compose up --build"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }
